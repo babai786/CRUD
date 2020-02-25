@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+{% extends 'pratikapp/base.html' %}
+{% block body_block%}
+<form method="post">
+<br><br><br><br><br>
+  <h1>EMPLOYEE</h1>
+  <table border='2'>
+    {{form.as_p}}
+  </table>
+
+  {% csrf_token%}
+  <input type="submit" class="btn btn-primary" value="INSERT EMPLOYEE">
+
+</form>
+{% endblock %}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% extends 'pratikapp/base.html'%}
+{%block body_block%}
+{% if list_stu %}
+<table border='2'>
+  <thead>
+    <th>STUDENT NAME</th>
+    <th>STUDENT NUMBER</th>
+    <th>STUDENT MARKS</th>
+    <th>ACTION</th>
+    </thead>
+    {% for stu in list_stu%}
+      <tr>
+        <td>{{stu.sname}}</td>
+        <td>{{stu.sno}}</td>
+        <td>{{stu.smarks}}</td>
+        <td><a href="/update/{{stu.id}}">UPDATE</a> &nbsp;<a href="/delete/{{stu.id}}">DELETE</a></td>
+      </tr>
+    {% endfor%}
+  </table>
+    {% else%}
+    print('TABLE NOT PRESENT')
+
+
+
+{% endif %}
+<a href="/create" class="btn btn-primary btn-large">ADD EMPLOYEE</a>
+
+
+
+{% endblock%}

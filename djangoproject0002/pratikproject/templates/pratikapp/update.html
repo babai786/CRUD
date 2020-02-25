@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>UPDATE INFO</h1>
+    <form method="post">
+      student name:<input type="text" name="sname" value="{{student.sname}}"><br>
+      student number:<input type="text" name="sno" value="{{student.sno}}"><br>
+      student marks:<input type="text" name="smarks" value="{{student.smarks}}"><br>
+      <input type="submit"  value="UPDATE">
+    {% csrf_token%}
+    </form>
+
+  </body>
+</html>
